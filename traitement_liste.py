@@ -65,3 +65,9 @@ def getAdmis(items):
         if item>=10:
             admis.append(item)
     return admis
+def getNonAdmis(items):
+    admis=[]
+    for item in items:
+        if item<10:
+            admis.append(item)
+    return admis
