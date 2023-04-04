@@ -52,3 +52,16 @@ def getMaxV1(items):
         if items[i]>m:
             m=items[i]
     return m
+def getMin(items):
+    m=items[0]
+    for i in range(1,len(items)):
+        if items[i]<m:
+            m=items[i]
+    return m
+
+def getAdmis(items):
+    admis=[]
+    for item in items:
+        if item>=10:
+            admis.append(item)
+    return admis
