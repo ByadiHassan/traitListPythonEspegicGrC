@@ -18,10 +18,10 @@ if __name__=="__main__":
 
     choix =0
     notes=[]
-    while choix !=9:
+    while choix !=13:
         #system("cls")
         choix=int(input("\n1. Saisir\n2. Afficher\n3. Somme\n"
-        + "4. Tri Croissant\n5. Inverser\n6. Max\n7. Admis\n8. NonAdmis\n9. Quitter\nTapez votre choix ? "))
+        + "4. Tri Croissant\n5. Inverser\n6. Max\n7. Admis\n8. NonAdmis\n9. Max\n10. Min\n11. Enregistrer\n12. Charger\n13. Quitter\nTapez votre choix ? "))
         if choix==1:
             n=int(input("Combien de notes voulez vous saisir ? "))
             tl.saisir(notes,n)
@@ -54,5 +54,17 @@ if __name__=="__main__":
         elif choix==8:
             tl.afficherHoris(tl.getNonAdmis(notes))
             system("pause")
-
+        elif choix==9:
+            print("Max=",tl.getMax(notes))            
+            system("pause")
+        elif choix==10:
+            print("Min=",tl.getMin(notes))            
+            system("pause")
+        elif choix==11:
+              tl.enregistrer(notes)       
+            
+        elif choix==12:
+            notes=tl.charger()
+            tl.afficherVertical(notes)                       
+            system("pause")
         

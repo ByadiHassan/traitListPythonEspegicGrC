@@ -1,3 +1,4 @@
+import pickle
 def saisir(liste,nbr):
     for i in range(nbr):
         liste.append(float(input("Tapez la note numéro "+str(i+1)+" : ")))
@@ -71,6 +72,15 @@ def getNonAdmis(items):
         if item<10:
             admis.append(item)
     return admis
+def enregistrer(liste):
+    fichier= open("notes.bin","wb")
+    pickle.dump(liste,fichier)
+    fichier.close()
+def charger():
+    fichier= open("notes.bin","rb")
+    liste=pickle.load(fichier)
+    fichier.close()
+    return liste
 
 
 if __name__=="__main__":
