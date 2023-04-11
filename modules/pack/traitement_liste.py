@@ -71,3 +71,12 @@ def getNonAdmis(items):
         if item<10:
             admis.append(item)
     return admis
+
+
+if __name__=="__main__":
+    print("Test des fonctions du module TraitementListe")
+    print('Test de la fonction getAdmis')
+    print("les notes sont :[10,12,3,15,7,19]","Les admis sont :",getAdmis([10,12,3,15,7,19]))
+    print('Test de la fonction getNonAdmis')
+    print("les notes sont :[10,12,3,15,7,19]","Les non admis sont :",getNonAdmis([10,12,3,15,7,19]))
+
